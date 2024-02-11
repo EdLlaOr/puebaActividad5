@@ -1,3 +1,4 @@
+
 <div class="blog">
     <div class="form">
         <div>
@@ -19,21 +20,6 @@
         <button (click)="guardarNoticia()">Añadir</button>
     </div>
     <div class="lista">
-        <div class = "noticia">
-            <label>{{arrNoticias[0].titulo}}</label>
-            <figure>
-                <img [src]="arrNoticias[0].url" alt="arrNoticias[0].titulo">
-            </figure>
-            <p>{{arrNoticias[0].texto}}</p>
-            <p>{{arrNoticias[0].fecha}}</p>
-        </div>
-        <div class = "noticia">
-            <label>{{arrNoticias[1].titulo}}</label>
-            <figure>
-                <img [src]="arrNoticias[1].url" alt="arrNoticias[0].titulo">
-            </figure>
-            <p>{{arrNoticias[1].texto}}</p>
-            <p>{{arrNoticias[1].fecha}}</p>
-        </div>
-    </div>
+        <div [innerHTML]="pintarNoticias()"></div>
+    /<div>
 </div>
