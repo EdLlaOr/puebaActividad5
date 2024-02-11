@@ -41,4 +41,12 @@ export class BlogComponent {
     this.arrNoticias.push(this.noticia2);
   }
 
+  guardarNoticia(){
+    if(this.newNoticia.texto!==""){
+    console.log(this.newNoticia.texto)
+    }else{
+      alert("debe introducir un texto");
+    }
+  }
+
 }

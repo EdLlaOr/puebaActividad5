@@ -2,24 +2,23 @@
     <div class="form">
         <div>
             <label for="titulo">Título</label>
-            <input type="text" id="titulo" placeholder="Introduzca el titulo de la noticia">
+            <input type="text" id="titulo" placeholder="Introduzca el titulo de la noticia" [(ngModel)]="newNoticia.titulo">
         </div>
         <div>
             <label for="imagen">Imagen</label>
-            <input type="text" id="imagen" placeholder="Introduzca URL de la imagen de la noticia">
+            <input type="text" id="imagen" placeholder="Introduzca URL de la imagen de la noticia" [(ngModel)]="newNoticia.url">
         </div>
         <div>
             <label for="texto">Texto</label>
-            <input type="text" id="texto" placeholder="Introduzca el texto de la noticia">
+            <input type="text" id="texto" placeholder="Introduzca el texto de la noticia" [(ngModel)]="newNoticia.texto">
         </div>
         <div>
             <label for="fecha">Fecha</label>
-            <input type="text" id="fecha" placeholder="Introduzca la fecha de la publicación">
+            <input type="text" id="fecha" placeholder="Introduzca la fecha de la publicación" [(ngModel)]="newNoticia.fecha">
         </div>
-        <button>Añadir</button>
+        <button (click)="guardarNoticia()">Añadir</button>
     </div>
     <div class="lista">
-        <!--introducir texto-->
         <div class = "noticia">
             <label>{{arrNoticias[0].titulo}}</label>
             <figure>
@@ -27,6 +26,14 @@
             </figure>
             <p>{{arrNoticias[0].texto}}</p>
             <p>{{arrNoticias[0].fecha}}</p>
+        </div>
+        <div class = "noticia">
+            <label>{{arrNoticias[1].titulo}}</label>
+            <figure>
+                <img [src]="arrNoticias[1].url" alt="arrNoticias[0].titulo">
+            </figure>
+            <p>{{arrNoticias[1].texto}}</p>
+            <p>{{arrNoticias[1].fecha}}</p>
         </div>
     </div>
 </div>
