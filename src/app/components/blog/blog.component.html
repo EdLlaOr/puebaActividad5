@@ -1,19 +1,19 @@
 
 <div class="blog">
-    <div class="form">
-        <div>
+    <div class="formulario">
+        <div class="input_formu">
             <label for="titulo">Título</label>
             <input type="text" id="titulo" placeholder="Introduzca el titulo de la noticia" [(ngModel)]="newNoticia.titulo">
         </div>
-        <div>
+        <div class="input_formu">
             <label for="imagen">Imagen</label>
             <input type="text" id="imagen" placeholder="Introduzca URL de la imagen de la noticia" [(ngModel)]="newNoticia.url">
         </div>
-        <div>
+        <div class="input_formu">
             <label for="texto">Texto</label>
             <input type="text" id="texto" placeholder="Introduzca el texto de la noticia" [(ngModel)]="newNoticia.texto">
         </div>
-        <div>
+        <div class="input_formu">
             <label for="fecha">Fecha</label>
             <input type="text" id="fecha" placeholder="Introduzca la fecha de la publicación" [(ngModel)]="newNoticia.fecha">
         </div>
@@ -21,5 +21,5 @@
     </div>
     <div class="lista">
         <div [innerHTML]="pintarNoticias()"></div>
-    /<div>
+    <div>
 </div>
